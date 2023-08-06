@@ -21,43 +21,47 @@
             <button id="btnPlay">Jugar!</button>
             <button id="btnScore" disabled = true>Puntuacion: 0</button>
             <button id="btnName" disabled = true>Nombre del Jugador</button>
-            <button id="btnContact">Contacto</button>    
+            <button id="btnContact">Contacto</button>     
         </div>
         <div class="deviceSimon">
-            <div class="btn Red" id="btnRed"></div>
-            <div class="btn Yellow" id="btnYellow"></div>
-            <div class="btn Blue" id="btnBlue"></div>
-            <div class="btn Green" id="btnGreen"></div>
+            <div class="btn Red" data-color="Red" id="btnRed"></div>
+            <div class="btn Yellow" data-color="Yellow" id="btnYellow"></div>
+            <div class="btn Blue" data-color="Blue" id="btnBlue"></div>
+            <div class="btn Green" data-color="Green" id="btnGreen"></div>
+        </div>
+        <div>
+            <h2>Instrucciones</h2>
+            <p></p>
         </div>
     </main>
-    <div id="modalLose" class="modal">
-        <div class="modalContent">
+    <div id="modal-lose" class="modal">
+        <div class="modal-content">
           <h2>¡Perdiste!</h2>
-          <p>Nivel Alcanzado: <span id="levelLose"></span></p>
-          <p>Puntaje: <span id="scoreLose"></span></p>
-          <button id="btnCloseModal">Cerrar</button>
-          <button id="btnRestart">Reiniciar Partida</button>
+          <p>Nivel Alcanzado: <span id="level-lose"></span></p>
+          <p>Puntaje: <span id="score-lose"></span></p>
+          <button id="btn-close-modal">Cerrar</button>
+          <button id="btn-restart">Reiniciar Partida</button>
         </div>
     </div>
     
-    <div id="modalName" class="modal Start">
-        <div class="modalContentName">
+    <div id="modal-names" class="modal-start">
+        <div class="modal-content-name">
             <h2>¡Bienvenido!</h2>
             <h3>Ingrese un Nombre para continuar</h3>
-            <input type="text" name="txtName" id="namePlayer" placeholder="Nombre del Jugador">
-            <button id="btnCompleteName">Continuar</button>
+            <input type="text" name="txt-name" id="name-player" placeholder="Nombre del Jugador">
+            <button id="btn-complete-name">Continuar</button>
         </div>
     </div>
     
-    <div id="modalContact" class="modal Contact">
-        <div class="modalContentContact">
+    <div id="modal-contact" class="modal-contact">
+        <div class="modal-content-contact">
             <h2>Dejanos tu Mensaje</h2>
-            <input type="text" name="txtName" id="nameContact" placeholder="Nombre">
-            <input type="text" name="txtMail" id="mailContact" placeholder="E-mail">
-            <textarea id="txtMessage" class="contentText" placeholder="Mensaje" rows="8"></textarea>
-            <button id="btnSend">Enviar</button>
-            <button id="btnCancel">Cancelar</button>
-            <a id="btnGit" href="https://github.com/zequ22/LPPA23_ALDERETE_SIMONDICE" target="_blank">Ir al repositorio en Github</a>
+            <input type="text" name="txt-Name" id="name-contact" placeholder="Nombre">
+            <input type="text" name="txt-mail" id="mail-contact" placeholder="E-mail">
+            <textarea id="txt-message" class="content-text" placeholder="Mensaje" rows="8"></textarea>
+            <button id="btn-send">Enviar</button>
+            <button id="btn-cancel">Cancelar</button>
+            <a id="btn-git" href="https://github.com/zequ22/LPPA23_ALDERETE_SIMONDICE" target="_blank">Ir al repositorio en Github</a>
         </div>
     </div>
 
