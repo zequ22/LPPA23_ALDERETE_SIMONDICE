@@ -1,5 +1,6 @@
 body{
     width: 100vw;
+    height: 100%;
     background-color: darkslategray;
     font-family: 'Caprasimo', cursive;
 }
@@ -10,25 +11,35 @@ header{
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    height: 30px;
+    height: 40px;
+    box-shadow: 0 2px 10px black;
 }
 
-.downBar{
-    display: flex;
-    justify-content: space-around;
+footer{
+    height: 10px;
+    padding: 5px;
+    border-top: 1px solid tomato;
+    text-align: center;
+    color: gray;
+    font-size: 10px;
+    
 }
 
 main{
     display: flex;
-    justify-content:space-between;
-    width: 100vh;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
 }
 
 .dataTable{
     display: flex;
     flex-direction: column;
+    width: 30%;
     text-align: justify;
     margin: 15px 15px;
+    box-shadow: 0 2px 10px black;
 }
 
 .deviceSimon{
@@ -36,6 +47,27 @@ main{
     grid-template-columns: repeat(2,1fr);
     grid-gap:1px;
 	align-items: center;
+    margin: 20px;
+}
+
+.instructions{
+    width: 30%;
+    margin: 15px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border-radius: 2%;
+    box-shadow: 0 2px 10px black;
+}
+.instructions h2{
+    background-color: black;
+    padding: 5px;
+    border-radius: 5%;
+}
+.instructions p{
+    text-align: justify;
+    padding: 8px;
+    margin: 10px;
 }
 
 .btn {
@@ -45,6 +77,8 @@ main{
     height: 150px;
     cursor: pointer;
     margin: 5px;
+    
+    box-shadow: 0 2px 10px black;
 }
 .btn:active,
 .active {
@@ -91,6 +125,7 @@ main{
     font-family: 'Caprasimo', cursive;
     cursor: pointer;
 }
+
 #btnContact:active,
 #active {
     background-color: tomato;
@@ -112,7 +147,7 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
   }
 
   .modal-content {
@@ -170,4 +205,45 @@ main{
     border-top: none;
     border-right: none;
     border-left: none;
+  }
+
+  #btn-complete-name, #btn-close-modal, #btn-restart, #btn-send, #btn-cancel{
+    border-radius: 5%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px;
+    font-family: 'Caprasimo', cursive;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  @media (max-width:750px) {
+    body{
+        width: 100vw;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+    }
+    .dataTable{
+        width: 70%;
+        padding-bottom: 0%;
+    }
+    .dataTable button{
+        height:min-content;
+    }
+    .deviceSimon{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:1px;
+        align-items: center;
+        margin: 20px;
+    }
+    .instructions{
+        width: 70%;
+    }
+
   }
