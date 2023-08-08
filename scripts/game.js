@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     var modalNames = document.getElementById('modal-names');
     var playerNameText = document.getElementById('name-player');
     var playerName = playerNameText.value;
-
+  
     if (playerName.length < 3) {
       alert('El nombre debe contener como mínimo 3 letras.');
       return;
@@ -33,11 +33,11 @@ window.addEventListener('load', function () {
       modalNames.style.display = 'none';
       btnShowName.textContent = 'Jugador: ' + playerName;
     }
-
-    // Al hacer click en "Contacto" para muestra el modal de contacto
+  
+    // Muestra el modal de contacto 
     var btnContact = document.getElementById('btnContact');
     btnContact.addEventListener('click', showModalContact);
-
+  
     function showModalContact() {
       modalContact.style.display = 'block';
     }
@@ -95,6 +95,7 @@ window.addEventListener('load', function () {
     btnStart.textContent = 'Nivel ' + lvl;
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
     sequence.push(randomColor);
+    btnStart.disabled = true;
 
     showSequence();
   }
@@ -149,7 +150,7 @@ window.addEventListener('load', function () {
         lvl = 0;
         sequence = [];
         btnStart.textContent = 'Jugar!';
-        btnStart.disabled = false;
+        btnStart.disabled = true;
         var btnPoints = document.getElementById('btnScore');
         btnPoints.textContent = 'Puntaje: 0';
         playerScore = 0;
@@ -175,6 +176,7 @@ window.addEventListener('load', function () {
     var btnCloseModal = document.getElementById('btn-close-modal');
     btnCloseModal.addEventListener('click', function () {
       modalLose.style.display = 'none';
+      btnStart.disabled = false;
     });
 
     // Se reinicia la partida desde el modal de "Perdiste" al hacer click en el boton

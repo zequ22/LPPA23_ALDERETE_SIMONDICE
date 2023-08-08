@@ -22,7 +22,6 @@ footer{
     text-align: center;
     color: gray;
     font-size: 10px;
-    
 }
 
 main{
@@ -48,6 +47,7 @@ main{
     grid-gap:1px;
 	align-items: center;
     margin: 20px;
+    
 }
 
 .instructions{
@@ -108,7 +108,7 @@ main{
     cursor: pointer;
 }
 #btnPlay:disabled{
-    background-color: darkgray;
+    background-color: tomato;
 }
 #btnPlay:active,
 #active {
@@ -205,6 +205,10 @@ main{
     border-top: none;
     border-right: none;
     border-left: none;
+    margin: 5px;
+  }
+  .modal-content-contact a{
+    font-size: 10px;
   }
 
   #btn-complete-name, #btn-close-modal, #btn-restart, #btn-send, #btn-cancel{
