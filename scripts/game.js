@@ -12,17 +12,17 @@ var playerScore = 0;
 window.addEventListener('load', function () {
 
   // Oculta los modals de contacto al cargar la página
-  var modalContact = document.getElementById('modal-contact');
+  var modalContact = document.getElementById('modalContact');
   modalContact.style.display = 'none';
 
   // Al hacer click en "Continuar" en el modal de nombre se oculta el modal y guardar el nombre del jugador
-  var btnGetName = document.getElementById('btn-complete-name');
+  var btnGetName = document.getElementById('btnCompleteName');
   btnGetName.addEventListener('click', hideModalName);
 
   // Función para ocultar el modal de nombre y guardar el nombre del jugador
   function hideModalName() {
-    var modalNames = document.getElementById('modal-names');
-    var playerNameText = document.getElementById('name-player');
+    var modalNames = document.getElementById('modalName');
+    var playerNameText = document.getElementById('namePlayer');
     var playerName = playerNameText.value;
   
     if (playerName.length < 3) {
@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
     }
 
     // Al hacer click en "Cancelar" en el modal de contacto se oculta
-    var btnCancel = document.getElementById('btn-cancel');
+    var btnCancel = document.getElementById('btnCancel');
     btnCancel.addEventListener('click', hideModalContact);
 
     function hideModalContact() {
@@ -53,15 +53,15 @@ window.addEventListener('load', function () {
     }
 
     // Al hacer click en "Enviar" del formulario de contacto valida y envia el correo
-    var btnSendEmail = document.getElementById('btn-send');
+    var btnSendEmail = document.getElementById('btnSend');
     btnSendEmail.addEventListener('click', sendEmail);
 
     function sendEmail() {
-      var txtTransmitter = document.getElementById('mail-contact');
+      var txtTransmitter = document.getElementById('emailContact');
       var transmitter = txtTransmitter.value;
-      var txtName = document.getElementById('name-contact');
+      var txtName = document.getElementById('nameContact');
       var name = txtName.value;
-      var txtMessage = document.getElementById('txt-message');
+      var txtMessage = document.getElementById('txtMessage');
       var message = txtMessage.value;
 
       var validateName = /^[a-zA-Z0-9\s]+$/;
@@ -169,22 +169,22 @@ window.addEventListener('load', function () {
 
   // Función para mostrar el modal de "Perdiste" con el puntaje obtenido
   function showModalLose(lvlObtained, points) {
-    var modalLose = document.getElementById('modal-lose');
-    var lvlLoseText = document.getElementById('level-lose');
-    var scoreLoseText = document.getElementById('score-lose');
+    var modalLose = document.getElementById('modalLose');
+    var lvlLoseText = document.getElementById('levelLose');
+    var scoreLoseText = document.getElementById('scoreLose');
     lvlLoseText.textContent = lvlObtained;
     scoreLoseText.textContent = points;
     modalLose.style.display = 'block';
 
     // Cierra el modal de "Perdiste"
-    var btnCloseModal = document.getElementById('btn-close-modal');
+    var btnCloseModal = document.getElementById('btnCloseModal');
     btnCloseModal.addEventListener('click', function () {
       modalLose.style.display = 'none';
       btnStart.disabled = false;
     });
 
     // Se reinicia la partida desde el modal de "Perdiste" al hacer click en el boton
-    var btnRestart = document.getElementById('btn-restart');
+    var btnRestart = document.getElementById('btnRestart');
     btnRestart.addEventListener('click', function () {
       modalLose.style.display = 'none';
       playerScore = 0;

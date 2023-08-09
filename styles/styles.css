@@ -141,7 +141,7 @@ main{
     font-family: 'Unlock', cursive;
 }
 
-.modal {
+.modalLose {
     display: none;
     position: fixed;
     top: 0;
@@ -151,7 +151,7 @@ main{
     background-color: black;
   }
 
-  .modal-content {
+  .modalContentLose {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -174,7 +174,7 @@ main{
     cursor: pointer;
   }
 
-  .modal-content-name {
+  .modalContentName {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -186,7 +186,7 @@ main{
     text-align: center;
   }
 
-  .modal-content-contact {
+  .modalContentContact {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -200,7 +200,7 @@ main{
     text-align: center;
     margin: 5px 2px;
   }
-  .modal-content-contact input, .modal-content-contact textarea {
+  .modalContentContact input, .modalContentContact textarea {
     background-color: transparent;
     border-bottom: 2px solid black;
     border-top: none;
@@ -208,11 +208,11 @@ main{
     border-left: none;
     margin: 5px;
   }
-  .modal-content-contact a{
+  .modalContentContact a{
     font-size: 10px;
   }
 
-  #btn-complete-name, #btn-close-modal, #btn-restart, #btn-send, #btn-cancel{
+  #btnCompleteName, #btnCloseModal, #btnRestart, #btnSend, #btnCancel{
     border-radius: 5%;
     background-color: black;
     border: none;

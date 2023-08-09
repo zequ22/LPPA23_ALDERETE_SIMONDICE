@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Unlock&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -36,34 +35,35 @@
             <p>El juego de forma aleatoria va iluminando los cuadrantes de colores. Después de esperar, el usuario debe ir introduciendo la secuencia mostrada en el orden correcto, ayudándose de su memoria visual. <br> Si lo consigue, este responderá con una secuencia más larga, y así sucesivamente. Si falla, el usuario debe volver a empezar. <br> A medida que los niveles van aumentando, la secuencia a repetir incrementa su dificultad.</p>
         </div>
     </main>
-    <div id="modal-lose" class="modal">
-        <div class="modal-content">
-          <h2>¡Perdiste!</h2>
-          <p>Nivel Alcanzado: <span id="level-lose"></span></p>
-          <p>Puntaje: <span id="score-lose"></span></p>
-          <button id="btn-close-modal">Cerrar</button>
-          <button id="btn-restart">Reiniciar Partida</button>
-        </div>
-    </div>
-    
-    <div id="modal-names" class="modal-start">
-        <div class="modal-content-name">
+
+    <div id="modalName" class="modalName">
+        <div class="modalContentName">
             <h2>¡Bienvenido!</h2>
             <h3>Ingrese un Nombre para continuar</h3>
-            <input type="text" name="txt-name" id="name-player" placeholder="Nombre del Jugador">
-            <button id="btn-complete-name">Continuar</button>
+            <input type="text" name="txtName" id="namePlayer" placeholder="Nombre del Jugador">
+            <button id="btnCompleteName">Continuar</button>
+        </div>
+    </div>
+
+    <div id="modalLose" class="modalLose">
+        <div class="modalContentLose">
+          <h2>¡Perdiste!</h2>
+          <p>Nivel Alcanzado: <span id="levelLose"></span></p>
+          <p>Puntaje: <span id="scoreLose"></span></p>
+          <button id="btnCloseModal">Cerrar</button>
+          <button id="btnRestart">Reiniciar Partida</button>
         </div>
     </div>
     
-    <div id="modal-contact" class="modal-contact">
-        <div class="modal-content-contact">
+    <div id="modalContact" class="modalContact">
+        <div class="modalContentContact">
             <h2>Dejanos tu Mensaje</h2>
-            <input type="text" name="txt-Name" id="name-contact" placeholder="Nombre">
-            <input type="text" name="txt-mail" id="mail-contact" placeholder="E-mail">
-            <textarea id="txt-message" class="content-text" placeholder="Mensaje" rows="8"></textarea>
-            <button id="btn-send">Enviar</button>
-            <button id="btn-cancel">Cancelar</button>
-            <a id="btn-git" href="https://github.com/zequ22/LPPA23_ALDERETE_SIMONDICE" target="_blank">Ir al repositorio en Github</a>
+            <input type="text" name="txtName" id="nameContact" placeholder="Nombre">
+            <input type="text" name="txtEmail" id="emailContact" placeholder="E-mail">
+            <textarea id="txtMessage" class="txtMessage" placeholder="Mensaje" rows="8"></textarea>
+            <button id="btnSend">Enviar</button>
+            <button id="btnCancel">Cancelar</button>
+            <a id="btnGit" href="https://github.com/zequ22/LPPA23_ALDERETE_SIMONDICE" target="_blank">Ir al repositorio en Github</a>
         </div>
     </div>
 
