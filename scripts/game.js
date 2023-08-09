@@ -90,15 +90,15 @@ window.addEventListener('load', function () {
 
     btnStart.disabled=false;
   }
-
-  // Función para mostrar el color en pantalla (efecto de iluminación)
+  
+  // Función para mostrar el color en pantalla
   function showColor(color) {
     btnColors.forEach(function (square) {
       var colorSquare = square.dataset.color;
       if (colorSquare === color) {
-        square.style.backgroundColor = color;
+        square.classList.add('active');
         setTimeout(function () {
-          square.style.backgroundColor = '';
+          square.classList.remove('active');
         }, 500);
       }
     });
