@@ -11,7 +11,7 @@ var playerScore = 0;
 // Espera hasta que la página haya cargado completamente
 window.addEventListener('load', function () {
 
-  // Oculta los modals de contacto y de nombre al cargar la página
+  // Oculta los modals de contacto al cargar la página
   var modalContact = document.getElementById('modal-contact');
   modalContact.style.display = 'none';
 
@@ -40,6 +40,7 @@ window.addEventListener('load', function () {
   
     function showModalContact() {
       modalContact.style.display = 'block';
+      btnStart.disabled=true;
     }
 
     // Al hacer click en "Cancelar" en el modal de contacto se oculta
@@ -48,6 +49,7 @@ window.addEventListener('load', function () {
 
     function hideModalContact() {
       modalContact.style.display = 'none';
+      btnStart.disabled=false;
     }
 
     // Al hacer click en "Enviar" del formulario de contacto valida y envia el correo
@@ -82,6 +84,8 @@ window.addEventListener('load', function () {
       var mailTo = 'mailto:' + transmitter + '?subject=' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message);
       window.location.href = mailTo;
       modalContact.style.display = 'none';
+
+      btnStart.disabled=false;
     }
   }
 
