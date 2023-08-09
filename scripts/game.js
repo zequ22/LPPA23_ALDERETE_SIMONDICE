@@ -190,7 +190,7 @@ window.addEventListener('load', function () {
         playerScore = 0;
       }
     }
-  }
+  };
 
   // Agrega un evento click a cada botón de colores para validar la selección del jugador
   btnColors.forEach(function (square) {
