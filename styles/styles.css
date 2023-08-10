@@ -222,31 +222,17 @@ footer {
     padding: 5px;
     text-align: center;
 }
-@media (max-width:750px) {
-    body {
+@media screen and (max-width: 750px) {
+    body{
         width: 100vw;
     }
-    .main {
-        display: flex;
-        flex-direction: column;
-        height: 80%;
-        width: 100%;
+    main {
+      flex-direction: column;
+      width: 100%;
+      height: 80%;
     }
-    .dataTable {
-        padding-bottom: 0%;
-        width: 70%;
-    }
-    .dataTable button {
-        height: min-content;
-    }
-    .deviceSimon {
-        align-items: center;
-        display: grid;
-        grid-gap: 1px;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 20px;
-    }
+    .dataTable,
     .instructions {
-        width: 70%;
+      width: 80%;
     }
-}
+  }

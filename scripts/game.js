@@ -92,6 +92,11 @@ window.addEventListener('load', function () {
     btnStart.disabled=false;
   }
   
+  // Agrega un evento click a cada botón de colores para validar la selección del jugador
+  btnColors.forEach(function (square) {
+    square.addEventListener('click', validateUserSelection);
+  });
+
   // Función para mostrar el color en pantalla
   function showColor(color) {
     btnColors.forEach(function (square) {
@@ -196,9 +201,4 @@ window.addEventListener('load', function () {
       }
     }
   };
-
-  // Agrega un evento click a cada botón de colores para validar la selección del jugador
-  btnColors.forEach(function (square) {
-    square.addEventListener('click', validateUserSelection);
-  });
 });
