@@ -196,5 +196,4 @@ window.addEventListener('load', function () {
   btnColors.forEach(function (square) {
     square.addEventListener('click', validateUserSelection);
   });
-
 });
