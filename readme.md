@@ -1,6 +1,7 @@
-# LPPA - ISI - UAI 2023
-## Simon Dice
+# Simon Dice
+## LPPA - ISI - UAI 2023
 
+### Alumno:
 [Alderete Ezequiel Alejandro](https://www.linkedin.com/in/ezequiel-alejandro-alderete-778392282/)
 
 **Git-Hub Pages:**
