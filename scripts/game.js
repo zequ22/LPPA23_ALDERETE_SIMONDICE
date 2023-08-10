@@ -12,6 +12,7 @@ window.addEventListener('load', function () {
   var userSequence = [];
   var waitingAnswer = false;
   var playerScore = 0;
+  var gameInProgress = false;
 
   // Oculta el modal de contacto al cargar la página
   var modalContact = document.getElementById('modalContact');
@@ -122,12 +123,16 @@ window.addEventListener('load', function () {
 
   // Funcion para comenzar el juego
   function startGame() {
+    var deviceSimon = document.querySelector('.deviceSimon');
+    deviceSimon.style.pointerEvents = 'auto';
+
     lvl++;
     btnStart.textContent = 'Nivel ' + lvl;
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
     sequence.push(randomColor);
     btnStart.disabled = true;
 
+    gameInProgress = true;
     showSequence();
   }
 
@@ -144,6 +149,7 @@ window.addEventListener('load', function () {
     lvlLoseText.textContent = lvlObtained;
     scoreLoseText.textContent = points;
     modalLose.style.display = 'block';
+    gameInProgress = false;
 
     // Cerrar el modal de "Perdiste"
     var btnCloseModal = document.getElementById('btnCloseModal');
@@ -151,7 +157,6 @@ window.addEventListener('load', function () {
       modalLose.style.display = 'none';
       btnStart.disabled = false;
     });
-
     // Se reinicia la partida desde el modal de "Perdiste" al hacer click en el boton
     var btnRestart = document.getElementById('btnRestart');
     btnRestart.addEventListener('click', function () {

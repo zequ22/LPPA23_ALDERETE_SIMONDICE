@@ -73,6 +73,7 @@ main{
     grid-gap: 1px;
     grid-template-columns: repeat(2, 1fr);
     margin: 20px;
+    pointer-events: none;
 }
 .btn {
     border-radius: 5%;
